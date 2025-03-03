@@ -1,0 +1,132 @@
+/* Applying black color to text */
+p {
+    color: #000000;
+}
+
+.sign-in-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    color:black;
+    border: 1px solid #000000;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+}
+
+.sign-in-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #EA454C;
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.additional-links {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.additional-links a {
+    display: block;
+    color: #EA454C;
+    text-decoration: none;
+}
+
+.additional-links a:hover {
+    text-decoration: underline;
+}
+
+/* #password { */
+/* 
+    background-color: #f8f8f8;
+}
+#email {
+
+    background-color: #f8f8f8;
+} */
+
+/* Basic styles for text and password input fields */
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid #cccccc;
+    border-radius: 4px;
+    color: #000000;
+    background-color: #f8f9fa;
+    font-size: 16px;
+}
+
+/* Focus state for input fields */
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus {
+    border-color: #EA454C;
+    outline: none;
+    background-color: #fff;
+}
+
+/* Styles for submit button */
+button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    background-color: #EA454C;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Hover state for submit button */
+button[type="submit"]:hover {
+    background-color: #EA454C;
+}
+
+/* Styles for additional buttons */
+button {
+    padding: 10px;
+    margin: 8px 0;
+    background-color: #f1f1f1;
+    color: #333;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Hover state for additional buttons */
+button:hover {
+    background-color: #ddd;
+}
