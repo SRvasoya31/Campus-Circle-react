@@ -5,7 +5,10 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       {/* Logo */}
-      <div className="logo-a">CAMPUS CIRCLE</div>
+      <div className="logo-a">
+        <img src="../public/Campus_Circle.jpg" alt="Campus Circle" />
+        {/* CAMPUS CIRCLE */}
+        </div>
 
       {/* Navigation Links */}
       <ul className="nav-links">

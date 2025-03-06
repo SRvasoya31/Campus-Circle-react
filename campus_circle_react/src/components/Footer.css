@@ -40,6 +40,7 @@
 }
 
 li {
+    width: 80px;
     background-color: #040404;
     margin: 10px ;
     padding: 10px;

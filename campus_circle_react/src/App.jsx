@@ -5,7 +5,9 @@ import Home from './pages/HomePage';
 import Footer from './components/Footer';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import About from './pages/About';
-
+import ContactForm from './pages/ContactForm';
+import PGDetail from './pages/PGDetail';
+import PGList from './pages/PGLists';
 
 function App() {
   return (
@@ -14,10 +16,14 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
+        <Route path="/" element={<PGList />} />
+        <Route path="/pg/:id" element={<PGDetail />} />
         {/* <Route path="/services" element={<Services />} />
         <Route path="/contact" element={<Contact />} /> */}
       </Routes>
+      <PGList/>
       <About/>
+      <ContactForm />
       <Footer />
     </Router>
   );
