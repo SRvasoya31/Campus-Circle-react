@@ -1,42 +1,86 @@
-import React from 'react';
-import { Link } from 'react-router-dom'; // Import Link from react-router-dom
-import './Signup.css'; // Assuming you have a Signup.css file
+import React, { useState } from 'react';
+import './SignUp.css';
 
-function Signup() {
-  return (
-    <div className="signup-container">
-      <div className="signup-form">
-        <h2>SIGN UP</h2>
-        <div className="form-group">
-          <label htmlFor="email">Email</label>
-          <input type="email" id="email" placeholder="Enter your email" />
-        </div>
-        <div className="form-group">
-          <label htmlFor="username">Username</label>
-          <input type="text" id="username" placeholder="Enter your Username" />
-        </div>
-        <div className="form-group">
-          <label htmlFor="password">Password</label>
-          <input type="password" id="password" placeholder="Enter your Password" />
-        </div>
-        <div className="form-group">
-          <label htmlFor="phone">Phone</label>
-          <input type="tel" id="phone" placeholder="Enter your Phone" />
-        </div>
-        <button className="signup-button">Sign Up</button>
-        <p className="login-link">
-          Already register? <Link to="/login">Login</Link> {/* Use Link here */}
-        </p>
-      </div>
-      <div className="logo-container">
-        <div className="logo">
-          CAMPUS
-          <br />
-          CIRCLE
-        </div>
-      </div>
-    </div>
-  );
-}
+const SignUp = () => {
+    const [formData, setFormData] = useState({
+        email: '',
+        username: '',
+        password: '',
+        phone: ''
+    });
 
-export default Signup;
+    const handleChange = (e) => {
+        setFormData({
+            ...formData,
+            [e.target.name]: e.target.value
+        });
+    };
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        console.log('Form Data:', formData);
+    };
+
+    return (
+        <div className="sign-up-container">
+            <div className="sign-up-box">
+                <div className="form-section">
+                    <h2>SIGN UP</h2>
+                    <form onSubmit={handleSubmit}>
+                        <div className="form-group">
+                            <label>Email</label>
+                            <input 
+                                type="email" 
+                                name="email" 
+                                placeholder="Enter your email" 
+                                value={formData.email} 
+                                onChange={handleChange} 
+                                required 
+                            />
+                        </div>
+                        <div className="form-group">
+                            <label>Username</label>
+                            <input 
+                                type="text" 
+                                name="username" 
+                                placeholder="Enter your username" 
+                                value={formData.username} 
+                                onChange={handleChange} 
+                                required 
+                            />
+                        </div>
+                        <div className="form-group">
+                            <label>Password</label>
+                            <input 
+                                type="password" 
+                                name="password" 
+                                placeholder="Enter your password" 
+                                value={formData.password} 
+                                onChange={handleChange} 
+                                required 
+                            />
+                        </div>
+                        <div className="form-group">
+                            <label>Phone</label>
+                            <input 
+                                type="tel" 
+                                name="phone" 
+                                placeholder="Enter your phone" 
+                                value={formData.phone} 
+                                onChange={handleChange} 
+                                required 
+                            />
+                        </div>
+                        <button type="submit" className="sign-up-btn">Sign Up</button>
+                    </form>
+                    <p className="login-link">Already registered? <a href="/SignIn">Sign In</a></p>
+                </div>
+                <div className="logo-section">
+                    <img src="../public/logo.png" alt="Campus Circle Logo" className="sign-up-logo" />
+                </div>
+            </div>
+        </div>
+    );
+};
+
+export default SignUp;
