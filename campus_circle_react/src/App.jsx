@@ -1,30 +1,24 @@
-import React from 'react';
-import './App.css'; // Assuming you have a CSS file for styling
-import Navbar from './components/navbar';
-import Home from './pages/HomePage';
-import Footer from './components/Footer';
+// src/App.jsx
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import HomePage from './pages/HomePage';
 import About from './pages/About';
 import ContactForm from './pages/ContactForm';
-import PGDetail from './pages/PGDetail';
-import PGList from './pages/PGLists';
+import SignIn from './pages/SignIn';
+import Signup from './pages/Signup';
+// Let’s add a new Dashboard page for logged in users
+import Dashboard from './pages/Dashboard';
 
 function App() {
   return (
     <Router>
-      <Navbar />
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<About />} />
-        <Route path="/" element={<PGList />} />
-        <Route path="/pg/:id" element={<PGDetail />} />
-        {/* <Route path="/services" element={<Services />} />
-        <Route path="/contact" element={<Contact />} /> */}
+        <Route path="/contact" element={<ContactForm />} />
+        <Route path="/signin" element={<SignIn />} />
+        <Route path="/signup" element={<Signup />} />
+        <Route path="/dashboard" element={<Dashboard />} />
       </Routes>
-      <PGList/>
-      <About/>
-      <ContactForm />
-      <Footer />
     </Router>
   );
 }

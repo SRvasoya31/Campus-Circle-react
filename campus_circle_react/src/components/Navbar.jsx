@@ -6,8 +6,9 @@ const Navbar = () => {
     <nav className="navbar">
       {/* Logo */}
       <div className="logo-a">
-        <img src="../public/Campus_Circle.jpg" alt="Campus Circle" />
-        {/* CAMPUS CIRCLE */}
+        {/* <a href="HomePage"> */}
+        <img src="../public/Campus_Circle.jpg"  alt="Campus Circle" />
+        {/* </a> CAMPUS CIRCLE */}
         </div>
 
       {/* Navigation Links */}
