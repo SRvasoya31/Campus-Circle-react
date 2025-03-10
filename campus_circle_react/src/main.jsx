@@ -9,8 +9,8 @@ import BookingForm from './components/Bokingform'
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <div>
-            {/* <App/> */}
-            <SignUp/>
+            <App/>
+            {/* <SignUp/> */}
                      
       
      </div>      

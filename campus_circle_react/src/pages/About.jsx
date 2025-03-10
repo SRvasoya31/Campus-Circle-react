@@ -2,10 +2,11 @@ import React from 'react';
 import './About.css';
 
 const teamMembers = [
-  { name: 'Sahil Vasoya', id: '21SOECE11148', image: '../sahil.jpg' },
+  { name: 'Sahil Vasoya', id: '21SOECE11148', image: '../archil.jpg' },
 //   { name: 'Sahil Vasoya', id: '21SOECE11148', image: '/public/sahil.j' },
   { name: 'Archil', id: '22SOECE11018', image: '../archil.jpg' },
-  { name: 'Brijesh', id: '22SOECE11048', image: '../brijesh.jpg' },
+  { name: 'Brijesh', id: '22SOECE11048', image: '../archil.jpg' },
+  // { name: 'Brijesh', id: '22SOECE11048', image: '../archil.jpg' },
 ];
 
 const About = () => {
