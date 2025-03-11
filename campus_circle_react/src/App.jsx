@@ -9,6 +9,8 @@ import ContactForm from './pages/ContactForm';
 import PGDetail from './pages/PGDetail';
 import PGList from './pages/PGLists';
 import SignUp from './pages/Signup';
+import SignIn from './pages/SignIn';
+import PGDetailForm from './components/PGDetailForm';
 
 function App() {
   return (
@@ -18,10 +20,13 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/signup" element={<SignUp />} />
+        <Route path="/Signin" element={<SignIn />} />
         <Route path="/" element={<PGList />} />
         <Route path="/pg/:id" element={<PGDetail />} />
-        {/* <Route path="/services" element={<Services />} />*/}
         <Route path="/contact" element={<ContactForm />} /> 
+        <Route path="/PGForm" element={<PGDetailForm />} /> 
+        
+
       </Routes>
       <PGList/>
       <About/>
