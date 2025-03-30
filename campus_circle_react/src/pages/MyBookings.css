@@ -1,0 +1,29 @@
+.my-bookings-container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+  }
+  
+  .bookings-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .booking-card {
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .booking-card h3 {
+    margin: 0 0 10px;
+    color: #007bff;
+  }
+  
+  .booking-card p {
+    margin: 5px 0;
+    color: #333;
+  }
+  
