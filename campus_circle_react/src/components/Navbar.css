@@ -1,26 +1,34 @@
 /* Navbar Container */
 .navbar {
-  background-color: #c8102e; /* Red background */
-  color: black;
+  background-color: #D4232A; /* Rich red background */
+  color: #fff;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 30px;
+  padding: 0px 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
 /* Logo Styling */
 .logo-a {
-  color: rgb(0, 0, 0);
+  color: #000;
   font-size: 24px;
   font-weight: bold;
   text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Logo Image Styling */
+.logo-a img {
+  height: 40px;
+  object-fit: contain;
 }
 
 /* Navigation Links */
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 20px;
+  gap: 25px;
 }
 
 .nav-links li {
@@ -29,27 +37,66 @@
 
 .nav-links a {
   text-decoration: none;
-  color: rgb(255, 255, 255);
-  /* background-color: #e1e1e1; */
+  color: #fff;
   font-weight: bold;
+  font-size: 18px;
+  transition: color 0.3s ease;
 }
 
+/* Link Hover Effect */
 .nav-links a:hover {
+  color: #fdd835; /* Gold hover effect */
   text-decoration: underline;
-  color: black;
 }
 
-/* Login Button */
-.login-btn {
-  background-color: white;
-  color: black;
-  padding: 8px 16px;
-  border-radius: 20px;
+/* User Menu (Login/Logout Button) */
+.user-menu {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* User welcome message */
+.username {
+  font-weight: bold;
+  color: #fff;
+}
+
+/* Login/Logout Button Styling */
+.login-btn,
+.logout-btn {
+  background: white;
+  color: #d81737;
+  padding: 8px 20px;
+  border-radius: 30px;
   font-weight: bold;
   border: none;
   cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
 }
 
-.login-btn:hover {
-  background-color: #313131;
+/* Button Hover Effects */
+.login-btn:hover,
+.logout-btn:hover {
+  background-color: #fdd835;
+  color: #000;
+  transform: scale(1.05);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .user-menu {
+    flex-direction: column;
+    gap: 5px;
+  }
 }
