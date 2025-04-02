@@ -1,0 +1,78 @@
+/* Background setup */
+.admin-login-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(to right, #4a90e2, #7b4397);
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Form styling */
+  .admin-login-form {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    width: 320px;
+    text-align: center;
+    animation: fadeIn 0.6s ease-in;
+  }
+  
+  /* Header styling */
+  .admin-login-form h2 {
+    margin-bottom: 1rem;
+    color: #333;
+    font-size: 2rem;
+    font-weight: 600;
+  }
+  
+  /* Input field styling */
+  .admin-login-form input {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    transition: 0.3s ease;
+  }
+  
+  /* Input focus effect */
+  .admin-login-form input:focus {
+    border-color: #4a90e2;
+    outline: none;
+    box-shadow: 0 0 5px rgba(74, 144, 226, 0.7);
+  }
+  
+  /* Button styling */
+  .admin-login-form button {
+    width: 100%;
+    padding: 0.8rem;
+    background: #4a90e2;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+  
+  /* Button hover effect */
+  .admin-login-form button:hover {
+    background: #357ABD;
+  }
+  
+  /* Fade-in animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
