@@ -1,5 +1,5 @@
 .form-container {
-  width: 400px;
+  width: 800px;
   margin: auto;
   background: #f0f0f0;
   padding: 20px;
@@ -46,4 +46,9 @@ button {
 
 button:hover {
   background: darkred;
+}
+.campus-circle-logo {
+  width: 150px;
+  height: auto;
+  animation: fadeIn 0.7s ease-in-out;
 }
