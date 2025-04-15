@@ -1,31 +1,32 @@
 import React from 'react';
+import PGCard from './PGCard';
 import './HomePage.css'; // Assuming you have a CSS file for styling
+import About from './About';
+import ContactForm from './ContactForm';
+import PGList from './PGLists';
 
 function Home() {
   return (
-     <div className="App">
-      {/* <header className="App-header">
-        <div className="logo">CAMPUS CIRCLE</div>
-        <nav> */}
-    {/* //       <ul>
-    //         <li><a href="#home">Home</a></li>
-    //         <li><a href="#about">About</a></li>
-    //         <li><a href="#services">Services</a></li>
-    //         <li><a href="#contact">Contact</a></li>
-    //       </ul>
-    //     </nav>
-    //     <button className="login-button">Log In</button>
-    //   </header> */}
+    
+    <div>
      <main>
         <div className="hero-image">
-          <img src='../public/bunk-beds.png '  alt="Bunk beds in a room" />
+          <img src='../assets/bunk-beds.png '  alt="Bunk beds in a room" />
           
           <div className="hero-text">
             <h1>Enjoy Your Life</h1>
           </div>
         </div>
       </main>
+      <div className="pg-list">
+      <PGList/>
+      <About/>
+      <ContactForm/>
+      
+      </div>
+
     </div>
+  
   );
 }
 
