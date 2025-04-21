@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Web3 from "web3";
 import "./ContactForm.css";
 
 const ContactForm = () => {
@@ -11,24 +10,8 @@ const ContactForm = () => {
     message: "",
   });
 
-  const contractAddress = "YOUR_SMART_CONTRACT_ADDRESS"; // Replace with your contract address
-  const contractABI = [ 
-    {
-      "constant": false,
-      "inputs": [
-        { "name": "name", "type": "string" },
-        { "name": "email", "type": "string" },
-        { "name": "contact", "type": "string" },
-        { "name": "subject", "type": "string" },
-        { "name": "message", "type": "string" }
-      ],
-      "name": "submitContact",
-      "outputs": [],
-      "payable": false,
-      "stateMutability": "nonpayable",
-      "type": "function"
-    }
-  ];
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [successMessage, setSuccessMessage] = useState("");
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -36,30 +19,36 @@ const ContactForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    
-    if (!window.ethereum) {
-      alert("Please install MetaMask to use Web3 features.");
-      return;
-    }
+    setIsSubmitting(true);
+    setSuccessMessage("");
+
+    const formData = new FormData();
+    formData.append("access_key", "f27e78d4-2adc-44d0-b82a-5426f2696fa0"); // Replace with your Web3Forms access key
+    formData.append("name", form.name);
+    formData.append("email", form.email);
+    formData.append("contact", form.contact);
+    formData.append("subject", form.subject);
+    formData.append("message", form.message);
 
     try {
-      const web3 = new Web3(window.ethereum);
-      await window.ethereum.request({ method: "eth_requestAccounts" });
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData,
+      });
 
-      const contract = new web3.eth.Contract(contractABI, contractAddress);
-      const accounts = await web3.eth.getAccounts();
+      const result = await response.json();
 
-      await contract.methods
-        .submitContact(form.name, form.email, form.contact, form.subject, form.message)
-        .send({ from: accounts[0] });
-
-      alert("Contact form submitted successfully on blockchain!");
-
-      setForm({ name: "", email: "", contact: "", subject: "", message: "" });
-
+      if (result.success) {
+        setSuccessMessage("Message sent successfully!");
+        setForm({ name: "", email: "", contact: "", subject: "", message: "" });
+      } else {
+        setSuccessMessage("Failed to send message. Please try again.");
+      }
     } catch (error) {
       console.error("Error submitting form:", error);
-      alert("Error submitting form. Check console for details.");
+      setSuccessMessage("An error occurred. Please try again later.");
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -79,8 +68,12 @@ const ContactForm = () => {
           <input type="text" name="subject" placeholder="Subject" value={form.subject} onChange={handleChange} required />
         </div>
         <textarea name="message" placeholder="Message" value={form.message} onChange={handleChange} required />
-        <button type="submit">Submit</button>
+        <button type="submit" disabled={isSubmitting}>
+          {isSubmitting ? "Sending..." : "Submit"}
+        </button>
       </form>
+
+      {successMessage && <p className="success-message">{successMessage}</p>}
     </div>
   );
 };

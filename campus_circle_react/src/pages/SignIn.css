@@ -6,6 +6,10 @@
     background-color: #F8F8F8;
   
 }
+a {
+    color: #ff4d4d;
+    text-decoration: none;
+  }
 
 .sign-in-box {
     display: flex;

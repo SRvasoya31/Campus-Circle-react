@@ -1,65 +1,9 @@
-/* .App {
-  text-align: center;
-}
-
-.App-header {
-  background-color: red;
-  padding: 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.logo {
-  font-size: 24px;
-  font-weight: bold;
-  color: white;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-}
-
-nav ul li a {
-  color: white;
-  text-decoration: none;
-}
-
-.login-button {
-  background-color: white;
-  color: black;
-  border: none;
-  padding: 10px 20px;
-  cursor: pointer;
-}
-
-.hero-image {
-  position: relative;
-  text-align: center;
-  color: rgb(0, 0, 0);
-}
-
-.hero-image img {
-  width: 100%;
-  height: auto;
-}
-
-.hero-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 36px;
-  font-weight: bold;
-} */
-
 
 /*  */
 body {
 
   font-family: Arial, sans-serif;
+  /* color : #333; */
   background-color: #d9d9d9;
   margin: 0;
   padding: 0;
@@ -69,7 +13,7 @@ body {
   text-align: center;
   /* padding: 10px; */
 }
-
+/* 
 header, footer {
   background-color: #282c34;
   color: white;
@@ -81,16 +25,7 @@ ul {
   padding: 0;
 }
 
-li {
-  background-color: #ffffff;
-  margin: 10px 0;
-  padding: 10px;
-  cursor: pointer;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  display: flex;
-  align-items: center;
-}
+
 
 li:hover {
   background-color: #f0f0f0;
@@ -99,4 +34,4 @@ li:hover {
 img {
   margin-right: 20px;
   border-radius: 4px;
-} 
+}  */
