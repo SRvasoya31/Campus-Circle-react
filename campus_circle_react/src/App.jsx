@@ -92,9 +92,9 @@ import PGDetailForm from "./components/PGDetailForm";
 import PGBooking from "./pages/PGBooking";
 import Payment from "./pages/Payment";
 import MyBookings from "./pages/Mybooking";
+import AdminLogin from "./admin/Login";
 
-
-
+import AdminSignup from "./admin/AdminSignup";
 import PGManagement from "./admin/pages/PGManagement";
 // import BookingManagement from "./admin/pages/ManageBookings";
 import ForgotPassword from "./pages/ForgotPassword";
@@ -128,7 +128,17 @@ function App() {
           <Route path="/my-bookings" element={<PrivateRoute element={<MyBookings />} />} />
           <Route path="/payment" element={<PrivateRoute element={<Payment />} />} />
 
-      
+          {/* ✅ Admin Routes */}
+          <Route path="/admin/login" element={<AdminLogin />} />
+          <Route path="/admin" element={<AdminLogin />} />
+          <Route path="/admin/dashboard" element={<Dashboard />} />
+          <Route path="/admin/manage-pgs" element={<PGManagement />} />
+        
+          {/* <Route path="/admin/dashboard" element={<PrivateRoute element={<Dashboard/>} />} /> */}
+          {/* <Route path="/admin/signup" element={<PrivateRoute element={<AdminSignup/>} />} /> */}
+          {/* <Route path="/admin/manage-pgs" element={<PrivateRoute element={<PGManagement />} />} /> */}
+          {/* <Route path="/admin/manage-bookings" element={<PrivateRoute element={<BookingManagement />} />} /> */}
+
           {/* 404 Page */}
           <Route path="*" element={<h1>404 - Page Not Found</h1>} />
         </Routes>

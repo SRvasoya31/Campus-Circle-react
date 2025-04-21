@@ -14,7 +14,7 @@ function Home() {
           <img src='../assets/bunk-beds.png '  alt="Bunk beds in a room" />
           
           <div className="hero-text">
-            <h1>Enjoy Your Life</h1>
+            <h1 className='text'>Enjoy Your Life</h1>
           </div>
         </div>
       </main>

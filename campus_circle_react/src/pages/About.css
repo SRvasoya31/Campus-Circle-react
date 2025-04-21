@@ -1,4 +1,7 @@
 /* About.css */
+body{
+  background-color: #ddd;
+}
 .about-container {
     padding: 20px;
     text-align: center;

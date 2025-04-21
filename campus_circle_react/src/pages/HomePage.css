@@ -1,10 +1,14 @@
 .App {
   text-align: center;
 }
+
 body{
   background-color: #d9d9d9;
 }
-
+.text{
+  background-color: black;
+  color: white;
+}
 .App-header {
   background-color: red;
   padding: 10px;
@@ -50,6 +54,8 @@ nav ul li a {
 }
 
 .hero-text {
+  /* background-color: white; */
+  color: black;
   position: absolute;
   top: 50%;
   left: 50%;

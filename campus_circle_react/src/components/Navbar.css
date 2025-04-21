@@ -11,7 +11,7 @@
 
 /* Logo Styling */
 .logo-a {
-  color: #000;
+  color: #000000;
   font-size: 24px;
   font-weight: bold;
   text-transform: uppercase;
@@ -37,7 +37,7 @@
 
 .nav-links a {
   text-decoration: none;
-  color: #fff;
+  color: #ffffff;
   font-weight: bold;
   font-size: 18px;
   transition: color 0.3s ease;

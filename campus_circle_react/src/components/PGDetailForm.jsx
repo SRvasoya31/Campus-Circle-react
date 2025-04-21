@@ -1,6 +1,5 @@
 
 
-
 import React, { useState } from "react";
 import "./PGDetailForm.css";
 import logo from "../assets/logo.png"; // Adjust path if needed
@@ -23,8 +22,8 @@ const PGDetailForm = () => {
   const handleRoomImageUpload = (event) => {
     const files = Array.from(event.target.files);
 
-    if (files.length < 2 || files.length > 3) {
-      alert("⚠️ Please upload 2 to 3 room photos!");
+    if (files.length < 1 || files.length > 2) {
+      alert("⚠️ Please upload 1 to 2 room photos!");
       return;
     }
 
@@ -123,7 +122,7 @@ const PGDetailForm = () => {
         <label>Upload Main PG Images</label>
         <input type="file" multiple onChange={handleMainImageUpload} />
 
-        <label>Upload Room Photos (2-3 images)</label>
+        <label>Upload Room Photos (1-2 images)</label>
         <input type="file" multiple accept="image/*" onChange={handleRoomImageUpload} />
 
         <button type="submit" disabled={loading}>
